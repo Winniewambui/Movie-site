@@ -1,3 +1,36 @@
+const icon = document.querySelector(".theme-mode");
+const darkMode = document.querySelector(".moon");
+const lightMode = document.querySelector(".sun");
+
+darkMode.addEventListener('click', change);
+
+function change (){
+   document.body.classList.toggle('dark-mode');
+   if(document.body.classList.contains('.dark-mode')){
+      document.body.classList.remove ('.dark-mode');
+      lightMode.style.visiblity = 'visible';
+    
+     
+} else {
+   darkMode.style.visiblity = 'visible';
+   lightMode.style.visiblity = 'invisible';
+   document.body.classList.add('.dark-mode');
+ }
+}
+// function change() {
+//    document.body.classList.toggle('dark-mode');
+//    if (document.body.classList.contains('dark-mode')) {
+//      darkMode.style.display = "none";
+//      lightMode.style.display = "block";
+//    } else {
+//      darkMode.style.display = "block";
+//      lightMode.style.display = "none";
+//    }
+//  }
+
+
+
+//CAROUSEL IMAGES
 const carousel = document.querySelector(".popular-movies-slideshow");
 // const firstImage = document.querySelector(".popular-movies-slideshow img");
 const carouselSlide = document.querySelectorAll(".popular-movies-slideshow img")
@@ -52,30 +85,7 @@ function showHide (e){
     }
    }
 
-// DropDownNavigation.addEventListener('click', droDdown);
-// function dropDown (e){
-//    e.preventDefault ();
-//    item.classList.toggle('open');
-
-//    if(
-//       item.classList.contains('open')){
-
-//          genreContents.style.visibility = 'visible'
-//          // genreContents.style.height =`${genreContents.scrollHeight}px`;
-//       }else{
-//          genreContents.style.height = "0px";
-//       }
 
 
 
-btn.addEventListener('click', function(event) {
-   var currentTheme= event.currentTarget.dataset.theme;
-  
-     if (currentTheme=== "light") {
-         toggleTheme('dark');
-     } else {
-         toggleTheme('light');
-     }
- 
- }, false);
 
