@@ -68,10 +68,10 @@ const genreContents = document.querySelector(".genre-dropdown-contents");
 DropDownBtn.addEventListener('click', showHide );
 
 function showHide (e){
-    if (genreContents.style.display === "none"){
-      genreContents.style.display = "block";
+   if (genreContents.style.visibility === "hidden"){
+      genreContents.style.visibility = "visible";
     } else {
-      genreContents.style.display = "none";
+      genreContents.style.visibility = "hidden";
     }
    }
 

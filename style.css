@@ -113,7 +113,7 @@ section img{
     /* margin: auto; */
 }
 .genres-menu{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     text-transform: capitalize;
 }
@@ -124,13 +124,14 @@ section img{
     margin-left: 50px;
     text-transform: capitalize;
     font-weight: 500;
+    /* position: relative; */
 }
 .genres-btn:hover{
     background-color: var(--text-color);
     color: var(--background-color);
 }
 .genre-dropdown-contents {
-    display: none;
+    visibility: hidden;
     /* z-index: 2;  */
     background-color: yellow;
     width: 120px;
@@ -146,8 +147,16 @@ section img{
 .theme-icon {
     color: var(--text-color);
     cursor: pointer;
+    position: relative;
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
   }
-  
+  .moon,
+.sun {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
   .sun {
     visibility: hidden;
   }
@@ -164,7 +173,7 @@ section img{
     visibility: hidden;
   }
 header{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     color: var(--text-color);
     /* border: 2px solid blue; */
     width: 90%;
