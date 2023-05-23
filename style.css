@@ -143,13 +143,26 @@ section img{
     text-transform: capitalize;
     /* display: flex; */
 }
-.theme-icon{
+.theme-icon {
     color: var(--text-color);
     cursor: pointer;
-}
-.sun{
+  }
+  
+  .sun {
     visibility: hidden;
-}
+  }
+  
+  .moon {
+    visibility: visible;
+  }
+  
+  body.dark-mode .sun {
+    visibility: visible;
+  }
+  
+  body.dark-mode .moon {
+    visibility: hidden;
+  }
 header{
     margin-top: 30px;
     color: var(--text-color);

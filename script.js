@@ -1,34 +1,24 @@
-const icon = document.querySelector(".theme-mode");
+//DARK & LIGHT MODE
+const icon = document.querySelector(".theme-icon");
 const darkMode = document.querySelector(".moon");
 const lightMode = document.querySelector(".sun");
 
-darkMode.addEventListener('click', change);
+icon.addEventListener('click', change);
 
 function change (){
+
    document.body.classList.toggle('dark-mode');
-   if(document.body.classList.contains('.dark-mode')){
-      document.body.classList.remove ('.dark-mode');
+
+   if(document.body.classList.contains('dark-mode')){
+      darkMode.style.visiblity = 'invisible';
       lightMode.style.visiblity = 'visible';
-    
-     
-} else {
-   darkMode.style.visiblity = 'visible';
-   lightMode.style.visiblity = 'invisible';
-   document.body.classList.add('.dark-mode');
+   
+       } else {
+          darkMode.style.visiblity = 'visible';
+          lightMode.style.visiblity = 'invisible';
+ 
  }
 }
-// function change() {
-//    document.body.classList.toggle('dark-mode');
-//    if (document.body.classList.contains('dark-mode')) {
-//      darkMode.style.display = "none";
-//      lightMode.style.display = "block";
-//    } else {
-//      darkMode.style.display = "block";
-//      lightMode.style.display = "none";
-//    }
-//  }
-
-
 
 //CAROUSEL IMAGES
 const carousel = document.querySelector(".popular-movies-slideshow");
