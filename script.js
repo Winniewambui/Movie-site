@@ -21,11 +21,16 @@ const topMovies = [
           "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
        },
        {
-           "id" :5,
-           "title" :"The Great",
-           "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
-       }
-   ]
+         "id" :5,
+         "title" :"The Great",
+         "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+     }
+      //  {
+      //      "id" :6,
+      //      "title" :"The Great",
+      //      "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+      //  }
+   ];
 
 const sectionTopMovies = document.querySelector('.section-items');
 
@@ -34,15 +39,15 @@ const section =topMovies.map((item) => {
   <div class = "top-movies">
    <img class="" src ="${item.image}" alt="${item.title}">
    </div>
-  `
+  `;
+  
 });
 
 sectionTopMovies.innerHTML =section.join("");
 
 
 //imageSlider IMAGES
-const imageSlider = document.querySelector(".section-items");
-// const firstImage = document.querySelector(".popular-movies-slideshow img");
+// const imageSlider = document.querySelector(".section-items");
 const slides = document.querySelectorAll(".section-items img")
 
 const previousBtn = document.querySelector(".prev-button");
@@ -58,9 +63,8 @@ nextBtn.addEventListener("click", () =>{
    else{
       slide ++;
    }
-   updateSlide();
-   // firstImage.style.display = "none";
-   // otherImages[position].style.display = "block";
+   updateImage();
+
 });
  // If it's the first slide, set as the last slide, else -1
   previousBtn.addEventListener("click", () =>{
@@ -71,15 +75,13 @@ nextBtn.addEventListener("click", () =>{
          slide --;
 
    };   
-   updateSlide();
-   // firstImage.style.display = "none";
-   // otherImages[position].style.display = "block";
+   updateImage();
+
 });
-function updateSlide() {
-   imageSlider.style.transform = `translateX(-${slide * 25}%)`;
+function  updateImage() {
+   sectionTopMovies.style.transform = `translateX(-${slide * 100}%)`;
  }
-//  imageSlider.style.display = "flex";
-//  imageSlider.style.flexWrap = "wrap";
+
 
 
 
@@ -154,13 +156,21 @@ movies.innerHTML =popularMovies.join("");
 
 //CAROUSEL IMAGES
 const carousel = document.querySelector(".popular-movies-slideshow");
-// const firstImage = document.querySelector(".popular-movies-slideshow img");
-const carouselSlide = document.querySelectorAll(".popular-movies-slideshow img")
+const carouselSlide = document.querySelectorAll(".popular-movies-slideshow img");
+const carouselParagraphs = document.querySelectorAll(".popular-movies p");
+const carouselHeadings = document.querySelectorAll(".popular-movies h2");
 
 const prevButton = document.querySelector("#carousel-prev-btn");
 const nextButton = document.querySelector("#carousel-next-btn");
 let position = 0;
 const numberOfSlides = carouselSlide.length;
+
+// Hide all images except the first one
+for (let i = 4; i < carouselSlide.length; i++) {
+   carouselSlide[i].style.display = "none";
+   carouselParagraphs[i].style.display = "none";
+   carouselHeadings[i].style.display = "none";
+ }
 
   // If it's the last slide, reset to 0, else +1
 nextButton.addEventListener("click", () =>{
@@ -169,10 +179,13 @@ nextButton.addEventListener("click", () =>{
    }
    else{
       position ++;
-   }
+   }; 
    updateSlide();
-   // firstImage.style.display = "none";
-   // otherImages[position].style.display = "block";
+
+   carouselSlide[position].style.display = "block";
+   carouselParagraphs[position].style.display = "block";
+   carouselHeadings[position].style.display = "block";
+
 });
  // If it's the first slide, set as the last slide, else -1
    prevButton.addEventListener("click", () =>{
@@ -184,14 +197,15 @@ nextButton.addEventListener("click", () =>{
 
    };   
    updateSlide();
-   // firstImage.style.display = "none";
-   // otherImages[position].style.display = "block";
+
+   carouselSlide[position].style.display = "block";
+   carouselParagraphs[position].style.display = "block";
+   carouselHeadings[position].style.display = "block";
 });
 function updateSlide() {
    carousel.style.transform = `translateX(-${position * 25}%)`;
  }
-// carousel.style.display = "flex";
-// carousel.style.flexWrap = "wrap";
+
 
 //dropdown section
 const DropDownBtn = document.querySelector(".genres-btn");
@@ -228,12 +242,12 @@ function change (){
    document.body.classList.toggle('dark-mode');
 
    if(document.body.classList.contains('dark-mode')){
-      darkMode.style.visiblity = 'invisible';
-      lightMode.style.visiblity = 'visible';
+      darkMode.style.visibility = 'invisible';
+      lightMode.style.visibility = 'visible';
    
        } else {
-          darkMode.style.visiblity = 'visible';
-          lightMode.style.visiblity = 'invisible';
+          darkMode.style.visibility = 'visible';
+          lightMode.style.visibility = 'invisible';
  
  }
 }

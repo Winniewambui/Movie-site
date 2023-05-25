@@ -236,13 +236,14 @@ header p:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 .section-items img{
     object-fit: cover;
-    max-width: 65rem;
+    max-width: 60rem;
     max-height: 100%;
     border-radius: 5px;
+  
 }
 #previous-slide,
 #next-slide {
@@ -283,7 +284,7 @@ background-color: var(--background-color);
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin: auto;
+    margin: 20px auto;
     /* border: 2px solid yellow; */
    margin-top: 80px;
 }
@@ -315,7 +316,7 @@ background-color: var(--background-color);
     /* background-color :red; */
     width: 38px;
     height: 40px;
-    bottom: -30rem;
+    bottom: -40rem;
     /* background-color: var(--background-color);
     color: var(--text-color); */
     /* background-color: rgba(0, 0, 0, 0.2); */
