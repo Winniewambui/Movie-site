@@ -109,21 +109,7 @@ gap: 50px;
     color: transparent;
     /* color: var(--background-color); */
 }
-section{
-    margin-top: 20px;
-    display: flex;
-    height: 400px;
-    gap: 20px;
-}
-section img{
-    border-radius:10px;
-}
-.img-header{
-    width: 70%;
-    max-height: 500px;
-    /* object-fit: cover; */
-    /* margin: auto; */
-}
+
 .genres-menu{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -143,14 +129,14 @@ section img{
     gap: 15px;
     /* position: relative; */
 }
-.genres-btn:hover{
+/* .genres-btn:hover{
     background-color: var(--text-color);
     color: var(--background-color);
 }
 .seeAll-btn:hover{
     background-color: var(--text-color);
     color: var(--background-color);
-}
+} */
 body.dark-mode .genres-btn {
 color: var(--text-color);
 box-shadow: 5px 5px 10px black;
@@ -159,14 +145,14 @@ body.dark-mode .seeAll-btn {
     color: var(--text-color);
     box-shadow: 5px 5px 10px black;
 } 
-body.dark-mode .genres-btn:hover{
+/* body.dark-mode .genres-btn:hover{
      color: var(--background-color);
      background-color: var(--text-color);
 }
 .body.dark-mode .seeAll-btn:hover{
     color: var(--background-color);
     background-color: var(--text-color);
-}
+} */
 .genre-dropdown-contents {
     visibility: hidden;
     /* z-index: 2;  */
@@ -178,9 +164,6 @@ body.dark-mode .genres-btn:hover{
     margin-top: 10px;
     margin-left: 120px;
     padding: 0;
-}
-body.dark-mode.genre-dropdown-contents{
-    color: #ffffff;
 }
 .genre-dropdown-contents li {
     list-style-type: none;
@@ -242,53 +225,14 @@ header p:hover{
     background-color: var(--text-color);
     color: var(--background-color);
 }
-.popular-movies-slideshow{
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    position: relative;
-}
-.popular-movies-slideshow img{
-    border-radius: 10px;
-    width: 450px;
-    max-height: 500px;
-    margin: auto;
-}
-.prev-btn,
-.next-btn{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 9;
-    border: none;
-    /* background-color :red; */
-    width: 38px;
-    height: 40px;
-    bottom: -22rem;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    /* background-color: rgba(0, 0, 0, 0.2); */
-}
-.prev-btn{
-left: 0;
-}
-.next-btn{
-    right: 0;
-}
-.prev-btn,
-.next-btn :focus{
-    outline: 1px solid var(--text-color);
-}
-
-
 .main-article{
     background-color: rgb(199, 133, 133);
     border: 2px solid red;
     margin-top: 50px;
 }
 .section-items{
+    margin-top: 80px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,11 +240,45 @@ left: 0;
 }
 .section-items img{
     object-fit: cover;
-    max-width: 600px;
+    max-width: 65rem;
     max-height: 100%;
     border-radius: 5px;
 }
+#previous-slide,
+#next-slide {
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    width: 48px;
+    height: 40px;
+     bottom: 5rem; 
+   
+    /* color: var(--text-color); */
+   /* background-color: rgba(0, 0, 0, 0.2);   */
+}
+ #previous-slide{
+left: 20px;
+ border: none;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+#next-slide{
+    right: 20px;
+    border: none;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+
+#previous-slide,
+#next-slide :focus{
+    outline: 1px solid var(--text-color);
+} 
+
 .popular-movies-slideshow{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,9 +296,43 @@ left: 0;
   }
   .popular-movies h2 {
     font-size: 18px;
-    color: red;
+    color: var(--text-color);
   }
   
   .popular-movies p {
     font-size: 16px;
+    color: var(--text-color);
   }
+  .prev-btn,
+.next-btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    /* border: none; */
+    /* background-color :red; */
+    width: 38px;
+    height: 40px;
+    bottom: -30rem;
+    /* background-color: var(--background-color);
+    color: var(--text-color); */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.prev-btn{
+left: 10px;
+border: none;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+.next-btn{
+    right: 10px;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+.prev-btn,
+.next-btn :focus{
+    outline: 1px solid var(--text-color);
+}
