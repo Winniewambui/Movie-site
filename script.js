@@ -23,23 +23,22 @@ const topMovies = [
        {
          "id" :5,
          "title" :"The Great",
-         "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
-     }, 
-     {
-      "id" :6,
-      "title" :"The Great",
-      "image" :"https://images.unsplash.com/photo-1472017454701-20a80cfeaac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8OTM0NzM5Nnx8ZW58MHx8fHx8&auto=format&fit=crop&w=700&q=60"
-   },
-   {
-      "id" :7,
-      "title" :"The Great",
-      "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
-  },
-  {
-   "id" :8,
-   "title" :"The Great",
-   "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
-}
+         "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=6
+//      {
+//       "id" :6,
+//       "title" :"The Great",
+//       "image" :"https://images.unsplash.com/photo-1472017454701-20a80cfeaac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8OTM0NzM5Nnx8ZW58MHx8fHx8&auto=format&fit=crop&w=700&q=60"
+//    },
+//    {
+//       "id" :7,
+//       "title" :"The Great",
+//       "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+//   },
+//   {
+//    "id" :8,
+//    "title" :"The Great",
+//    "image" :"https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9yaXpvbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+// }
 
      
    ];

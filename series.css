@@ -182,7 +182,11 @@ section img{
   body.dark-mode .moon {
     visibility: hidden;
   }
+  .main-article{
+    background-color: rgb(183, 154, 212) !important;
+  }
 article{
+ 
     color: var(--text-color);
     /* background-color: rgb(110, 79, 79) !important;*/
     width: 47rem;
@@ -203,6 +207,7 @@ article h3{
     font-size: 30px;
     text-align: center;
 }
+
 .deal-btn{
     margin-top: 20px;
 width: 90%;
