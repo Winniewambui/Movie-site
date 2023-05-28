@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  font-family: "Poppins", sans-serif;
+>>>>>>> origin/main
   background-color: var(--background-color);
 }
 /* default/light mode colors */
@@ -14,6 +18,7 @@
 body.dark-mode {
   --background-color: #333333;
   --text-color: #ffffff;
+<<<<<<< HEAD
 }
 main {
   max-width: 1600px;
@@ -55,13 +60,40 @@ navbar {
 }
 .navbar-tabs {
   /* background-color: rgb(224, 222, 222)!important; */
+=======
+}
+
+navbar {
+  display: flex;
+  box-shadow: 2px 2px 5px rgb(201, 201, 201);
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+}
+
+.logo span {
+  color: rgb(51, 51, 194);
+}
+
+.navbar-tabs {
+>>>>>>> origin/main
   list-style-type: none;
   display: flex;
   gap: 50px;
 }
 .navbar-tabs li a {
+<<<<<<< HEAD
   /* background-color: inherit; */
   /* background-color: rgb(224, 222, 222)!important; */
+=======
+>>>>>>> origin/main
   text-decoration: none;
   color: var(--text-color);
   font-size: 20px;
@@ -71,16 +103,24 @@ navbar {
 .navbar-tabs :hover {
   color: rgb(153, 147, 147);
   cursor: pointer;
+<<<<<<< HEAD
   text-decoration: underline;
   /* border-bottom: 2px solid rgb(153, 147, 147); */
 }
 #search-input {
   border: none;
   outline: none;
+=======
+  transition: 1s ease-out all;
+}
+#search-input {
+  border: none;
+>>>>>>> origin/main
   padding: 10px 30px;
   border-radius: 20px;
   position: relative;
   border: 1px solid rgb(153, 147, 147);
+<<<<<<< HEAD
   cursor: pointer;
 }
 #search-input::placeholder {
@@ -109,6 +149,26 @@ navbar {
   background-color: transparent;
   color: transparent;
   /* color: var(--background-color); */
+=======
+}
+
+.search-input {
+  border: none;
+  outline: none;
+}
+
+#search-input::placeholder {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 20px;
+>>>>>>> origin/main
 }
 
 .genres-menu {
@@ -232,6 +292,7 @@ header p:hover {
   border: 2px solid red;
   margin-top: 150px;
 }
+<<<<<<< HEAD
 .section-items {
   margin-top: 80px;
   position: relative;
@@ -285,6 +346,56 @@ header p:hover {
 #next-slide :focus {
   outline: 1px solid var(--text-color);
 }
+=======
+.carousel-container {
+    position: relative;
+  }
+  
+  .section-items {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden;
+  }
+
+  .section-items img{
+    object-fit: cover;
+    width: 800px;
+    border-radius: 5px;
+  
+}
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    bottom: 50%;
+    color: #ffffff;
+    font-size: 35px;
+    background-color:transparent;
+    border: none;
+  }
+  
+  .prev-button {
+    left: 20px;
+  }
+  
+  .next-button {
+    right: 20px;
+  }
+  
+  .prev-button:focus,
+  .next-button:focus {
+    outline: 1px solid var(--text-color);
+  }
+  
+>>>>>>> origin/main
 
 .popular-movies-slideshow {
   position: relative;
@@ -303,6 +414,7 @@ header p:hover {
   /* overflow: hidden; */
   /* overflow-x: scroll; Enable horizontal scrolling */
   /* white-space: nowrap; Prevent line breaks */
+<<<<<<< HEAD
 }
 /* .img-item*/
 .popular-movies-slideshow img {
@@ -320,6 +432,14 @@ header p:hover {
   border-radius: 10px;
   border: 3px solid rgb(128, 122, 122);
   /* margin: -10px;  */
+=======
+}
+.img-item {
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 100%;
+  border-radius: 10px;
+>>>>>>> origin/main
 }
 .popular-movies h2 {
   font-size: 18px;

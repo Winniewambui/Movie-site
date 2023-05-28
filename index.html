@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>BADDIE MOVIES</title>
+    <title>Baddie Movies</title>
 </head>
 <body>
     <main>
         <nav>
     <navbar>
         <div class="logo"><a href="./index.html">
-            <h1>BADDIE</h1>
-            <h2>MOVIES</h2>
+            <h1>Baddie <span>Movies</span></h1>
         </a>
         </div>
     
@@ -27,10 +29,23 @@
         </ul>
        
        
+<<<<<<< HEAD
             <input type="search" name="search" id="search-input" placeholder="Search...">
             <div class="search-icon">
              <i class="fa fa-search" aria-hidden="false"></i> 
             </div> 
+=======
+            
+        <div class="search-icon">
+            <i class="fa fa-search" aria-hidden="false"></i>
+          </div>
+          
+          <div class="search-input-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search">
+          </div>
+          
+          
+>>>>>>> origin/main
 
             <div class="theme-icon">
                 <img src="./images/moon.png" class="moon" style="color: yellow;" >
@@ -38,11 +53,16 @@
                 </div>
     </navbar>
 </nav>
-<div class="section-items"></div>
+<div class="carousel-container">
+    <div class="section-items"></div>
+  
+      <i class="fa fa-chevron-left prev-button" id="previous-slide" onclick="previousBtn ()" aria-hidden="true"></i>
 
-<button class="prev-button" id="previous-slide" onclick="previousBtn ()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-<button class="next-button" id="next-slide" onclick="nextBtn ()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-   
+
+      <i class="fa fa-chevron-right next-button" id="next-slide" onclick="nextBtn ()" aria-hidden="true"></i>
+
+  </div>
+  
     <div class="genres-menu">
         <button type="submit" class="genres-btn">genres
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -61,7 +81,7 @@
      <button type="submit" class="seeAll-btn">SEE ALL <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
     </header>
 
-    <div class="popular-movies-slideshow"></div>
+    <!-- <div class="popular-movies-slideshow"></div> -->
   
     <button class="prev-btn" id="carousel-prev-btn" onclick="prev ()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
     <button class="next-btn" id="carousel-next-btn" onclick="next ()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
