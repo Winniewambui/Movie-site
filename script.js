@@ -55,6 +55,14 @@ const section =topMovies.map((item) => {
   
 });
 
+const searchIcon = document.querySelector('.search-icon');
+const searchInputContainer = document.querySelector('.search-input-container');
+
+searchIcon.addEventListener('click', function() {
+  searchInputContainer.classList.toggle('active');
+});
+
+
 sectionTopMovies.innerHTML =section.join("");
 
 //imageSlider IMAGES
