@@ -1,9 +1,11 @@
 const searchIcon = document.querySelector('.search-icon');
 const inputPlaceholder = document.querySelector('#search-input');
+const questionMark = searchIcon.querySelector('i');
 
 searchIcon.addEventListener('click', toggleSearchInput);
 function toggleSearchInput (){
    inputPlaceholder.classList.toggle('show');
+   questionMark.style.backgroundColor = inputPlaceholder.classList.contains('show') ? 'transparent' : '#745a5a';
 };
 
 
