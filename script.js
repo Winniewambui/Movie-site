@@ -72,20 +72,6 @@ function previousBtn() {
 }
 
 
-//dropdown section
-const DropDownBtn = document.querySelector(".genres-btn");
-const genreContents = document.querySelector(".genre-dropdown-contents");
-
-DropDownBtn.addEventListener("click", showHide);
-
-function showHide(e) {
-  if (genreContents.style.visibility === "hidden") {
-    genreContents.style.visibility = "visible";
-  } else {
-    genreContents.style.visibility = "hidden";
-  }
-}
-
 //KIDS MOVIES
 const popularMoviesData = [
   {
@@ -204,12 +190,6 @@ const actionMoviesData = [
     content: "Action.Thriller.Sci-Fi.Violence",
     image: "./wakanda.jpg",
   }
-  // {
-  //   id: 5,
-  //   title: "avengers",
-  //   content: "Action.Thriller.Sci-Fi.Violence",
-  //   image: "./avengers.jpg",
-  // },
 ]
 
 const actionCarousel = document.querySelector(".popular-action-movies");
@@ -248,33 +228,26 @@ function filterActionMovies(e) {
 
 
 const dramaMoviesData = [
-  
-  // {
-  //   id: 1,
-  //   title: "A Fall from grace",
-  //   content: "Drama.Suspense.Thriller",
-  //   image: "./fall from grace.jpg",
-  // },
   {
-    id: 2,
+    id: 1,
     title: "I can do it all by myself",
     content: "Drama.Suspense.Romance",
     image: "./all by myself.jpg",
   },
   {
-    id: 3,
+    id: 2,
     title: "Madea",
     content: "Drama.Family.Comedy",
     image: "./madea.jpg",
   },
   {
-    id: 4,
+    id: 3,
     title: "Oval",
     content: "Drama.Romance.Suspense",
     image: "./oval-drama.jpg",
   },
   {
-    id: 5,
+    id: 4,
     title: "ruthless",
     content: "Drama.Thriller.Mysterious",
     image: "./ruthless.jpg",
@@ -313,28 +286,127 @@ function filterDramaMovies(e) {
   });
 }
 
-const genreItems = genreContents.getElementsByTagName("a");
 
-// Loop through each genre item and add an event listener
-for (let i = 0; i < genreItems.length; i++) {
-  genreItems[i].addEventListener("click", selectCategory);
+
+
+// const genreBtn = document.querySelector('.genres-btn');
+// const genreDropdown = document.querySelector('.genre-dropdown-contents');
+
+// genreBtn.addEventListener('click', toggleGenreDropdown);
+
+// function toggleGenreDropdown() {
+//   if (genreDropdown.style.visibility === "hidden") {
+//     genreDropdown.style.visibility = "visible";
+//   } else {
+//     genreDropdown.style.visibility = "hidden";
+//   }
+// }
+
+// const genreLinks = genreDropdown.getElementsByTagName('a');
+// for (const link of genreLinks) {
+//   link.addEventListener('click', filterMoviesByGenre);
+// }
+
+// function filterMoviesByGenre(event) {
+//   event.preventDefault();
+//   const genre = event.target.textContent.toLowerCase();
+//   const movieSections = document.querySelectorAll('.movie-category');
+
+//   for (const section of movieSections) {
+//     const category = section.querySelector('h4.categories').textContent.toLowerCase();
+//     if (category === genre) {
+//       section.style.display = 'block';
+//     } else {
+//       section.style.display = 'none';
+//     }
+//   }
+// }
+
+const movieSections = document.querySelector('.movie-category');
+
+const genreBtn = document.querySelector('.genres-btn');
+const genreDropdown = document.querySelector('.genre-dropdown-contents');
+
+genreBtn.addEventListener('click', toggleGenreDropdown);
+
+function toggleGenreDropdown() {
+  if (genreDropdown.style.visibility === 'hidden') {
+    genreDropdown.style.visibility = 'visible';
+  } else {
+    genreDropdown.style.visibility = 'hidden';
+  }
 }
 
-function selectCategory(e) {
-  const selectedCategory = e.target.textContent.trim().toUpperCase();
-  const categoryTitles = document.querySelectorAll(".categories");
+const genreLinks = genreDropdown.getElementsByTagName('a');
+for (const link of genreLinks) {
+  link.addEventListener('click', filterMoviesByGenre);
+}
 
-  // Loop through each category title and check if it matches the selected category
-  categoryTitles.forEach((title) => {
-    if (title.textContent.trim().toUpperCase() === selectedCategory) {
-      title.scrollIntoView({ behavior: "smooth" }); // Scroll to the selected category
+function filterMoviesByGenre(event) {
+  event.preventDefault();
+  const genre = event.target.textContent.toLowerCase();
+  const movieSections = document.querySelectorAll('.movie-category > div');
+
+  movieSections.forEach(section => {
+    const category = section.previousElementSibling.textContent.toLowerCase();
+    if (category === genre) {
+      section.style.display = 'block';
+      section.classList.add('flex-container');
+    } else {
+      section.style.display = 'none';
+      section.classList.remove('flex-container');
     }
   });
 }
 
+// //dropdown section
+// const DropDownBtn = document.querySelector(".genres-btn");
+// const genreContents = document.querySelector(".genre-dropdown-contents");
+
+// DropDownBtn.addEventListener("click", showHide);
+
+// function showHide(e) {
+//   if (genreContents.style.visibility === "hidden") {
+//     genreContents.style.visibility = "visible";
+//   } else {
+//     genreContents.style.visibility = "hidden";
+//   }
+// }
+// const genreBtn = document.querySelector('.genres-btn');
+// const genreDropdown = document.querySelector('.genre-dropdown-contents');
+
+// genreBtn.addEventListener('click', toggleGenreDropdown);
+
+// function toggleGenreDropdown() {
+//   if (genreDropdown.style.visibility === "hidden") {
+//         genreDropdown.style.visibility = "visible";
+//       } else {
+//         genreDropdown.style.visibility = "hidden";
+//       }
+//     };
+    
 
 
 
+// const genreLinks = genreDropdown.getElementsByTagName('a');
+// for (const link of genreLinks) {
+//   link.addEventListener('click', filterMoviesByGenre);
+// }
+
+// function filterMoviesByGenre(event) {
+//   event.preventDefault();
+//   const genre = event.target.textContent;
+//   const movieSections = document.querySelectorAll('.categories');
+  
+//   movieSections.forEach(section => {
+//     const category = section.textContent.toLowerCase();
+//     if (category === genre.toLowerCase()) {
+//       section.style.display = 'block';
+//     } else {
+//       section.style.display = 'none';
+//     }
+//   });
+// }
 
 //DARK & LIGHT MODE
 // const icon = document.querySelector(".theme-icon");
