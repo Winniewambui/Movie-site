@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1024px) {
   * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@
   }
   main {
     margin: auto;
+    overflow: hidden;
   background-color: var(--background-color);
 }
   nav {
@@ -128,31 +129,73 @@
     margin: 10px;
     text-transform: capitalize;
   }
-  .genre-dropdown-contents {
+  /* .genre-dropdown-contents {
     visibility: hidden;
     position: absolute;
     z-index: 2;
     background-color: rgb(243, 240, 240);
     min-width: 120px;
     border-radius: 10px;
+    /* text-transform: lowercase; */
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    /* padding: 0;*/
+    /* padding: 0;
     top: 41px;
-    left: 90px;
+    left: 140px;
   }
-  .genre-dropdown-contents li {
+  .genre-dropdown-contents li a {
     list-style-type: none;
     text-transform: capitalize;
+   
     padding: 2px 10px;
     display: block;
   }
+  .genre-dropdown-contents a{
+    text-decoration: none;
+  } */
   /* .genres-menu:hover .genre-dropdown-contents {
   visibility: visible;
 } */
+.genres-menu {
+  position: relative;
+  margin: 10px;
+  text-transform: capitalize;
+}
+
+.genre-dropdown-contents {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(243, 240, 240);
+  min-width: 120px;
+  border-radius: 10px;
+  top: 41px;
+  left: 0;
+  padding: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.genre-dropdown-contents li {
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.genre-dropdown-contents li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+
+.genre-dropdown-contents li a:hover {
+  background-color: #ccc;
+}
+.fa-chevron-down {
+  margin-left: 5px;
+}
   .popularMovies-header {
     color: var(--text-color);
     width: 77%;
-    margin: auto;
+    margin: 30px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,9 +203,9 @@
   }
   .popularMovies-header h3 {
     color: black;
-    font-size: 15px;
+    font-size: 20px;
   }
-  .popularMovies-header p {
+  /* .popularMovies-header p {
     font-size: 12px;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -172,21 +215,20 @@
   .popularMovies-header p:hover {
     background-color: var(--text-color);
     color: var(--background-color);
-  }
+  }    */
   .section-items {
-    width: 65.5rem;
-    margin: 30px auto;
-    overflow: hidden;
+    margin-top: 40px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    /* overflow: hidden; */
   }
   .section-items img {
     object-fit: cover;
-    width: 200px;
-    max-height: 500px; 
+    max-width: 600px;
+    height: 500px;
     border-radius: 5px;
   }
   /* .section-items img:nth-child(n+5) {
@@ -222,36 +264,53 @@
     outline: 1px solid var(--text-color);
   }
 
-  .popular-movies-slideshow {
+  .popular-kids-movies,
+  .popular-action-movies,
+  .popular-drama-movies{
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    width: 65.5rem;
+    width: 70.5rem;
     margin: 20px auto;
   }
 
-  .popular-movies-slideshow img {
+  .popular-kids-movies img,
+  .popular-action-movies img,
+  .popular-drama-movies img {
     text-align: center;
     object-fit: cover;
-    width: 250px;
+    width: 300px;
     max-height: 350px;
     border-radius: 15px;
     /* padding: 10px; */
     transition:  0.2s;
   }
 
-  .popular-movies-slideshow img:hover {
+  .popular-kids-movies img,
+  .popular-action-movies img,
+  .popular-drama-movies img:hover {
     border-radius: 10px;
     border: 3px solid rgb(128, 122, 122);
   }
-  .popular-movies h2 {
+  .kids-movies h2,
+  .action-movies h2,
+  .drama-movies h2{
     font-size: 15px;
     color: var(--text-color);
   }
 
-  .popular-movies p {
+  .kids-movies p,
+  .action-movies p,
+  .drama-movies p{
     font-size: 12px;
     color: var(--text-color);
+    /* overflow-x:auto; */
+  }
+  .categories{
+    position: relative;
+    left: 300px;
+    bottom: 5px;
+    font-size: 18px;
   }
 }
