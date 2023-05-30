@@ -164,7 +164,6 @@ section img {
   /* background-color: var(--background-color);
   color: var(--text-color); */
 }
-<<<<<<< HEAD
   .sun {
     visibility: hidden;
   }
@@ -213,11 +212,9 @@ padding: 12px;
 font-size: 15px; 
 font-weight: 700;                          
 border-radius: 8px;
-
-=======
+}
 .sun {
   visibility: hidden;
->>>>>>> origin/main
 }
 
 .moon {

@@ -11,39 +11,39 @@ function toggleSearchInput() {
 //top notch movies
 const topMovies = [
   {
-    id: 1,
-    title: "The Originals",
-    image: "./originals.jpg",
+    "id": 1,
+    "title": "The Originals",
+    "image": "./originals.jpg",
   },
   {
-    id: 1,
-    title: "The Avengers",
-    image: "./avengers.jpg",
+    "id": 1,
+    "title": "The Avengers",
+    "image": "./avengers.jpg",
   },
   {
-    id: 4,
-    title: "The Merlin",
-    image: "./merlin.jpg",
+    "id": 4,
+    "title": "The Merlin",
+    "image": "./merlin.jpg",
   },
   {
-    id: 5,
-    title: "The Oval",
-    image: "./OVAL.jpg",
+    "id": 5,
+    "title": "The Oval",
+    "image": "./OVAL.jpg",
   },
   {
-    id: 6,
-    title: "Top Gun",
-    image: "./topgun.jpg",
+    "id": 6,
+    "title": "Top Gun",
+    "image": "./topgun.jpg",
   },
   {
-    id: 7,
-    title: "The Titanic",
-    image: "./titanic.jpg",
+    "id": 7,
+    "title": "The Titanic",
+    "image": "./titanic.jpg",
   },
   {
-    id: 8,
-    title: "Black Panther",
-    image: "./wakanda.jpg",
+   "id": 8,
+    "title": "Black Panther",
+    "image": "./wakanda.jpg",
   },
 ];
 
@@ -75,54 +75,54 @@ function previousBtn() {
 //KIDS MOVIES
 const popularMoviesData = [
   {
-    id: 1,
-    title: "Sophia The First",
-    content: "Family movies.Kids.fiction.Movie(2005)",
-    image: "./sofia the first.jpg",
+    "id": 1,
+    "title": "Sophia The First",
+    "content": "Family movies.Kids.fiction.Movie(2005)",
+    "image": "./sofia the first.jpg",
   },
   {
-    id: 2,
-    title: "Tangled",
-    content: "Dramas.Fmily Movies.Movies Based On Books(2018)",
-    image: "./rapunzel.jpg",
+    "id": 2,
+    "title": "Tangled",
+    "content": "Dramas.Fmily Movies.Movies Based On Books(2018)",
+    "image": "./rapunzel.jpg",
   },
   {
-    id: 3,
-    title: "Aladdin",
-    content: "Family movies.Kids.Sci-Fi.Movie(2007)",
-    image: "./aladdin.jpg",
+    "id": 3,
+    "title": "Aladdin",
+    "content": "Family movies.Kids.Sci-Fi.Movie(2007)",
+    "image": "./aladdin.jpg",
   },
   {
-    id: 4,
-    title: "Snow White",
-    content: "Family movies.Kids.fiction.Movie(2005)",
-    image: "./snow white.jpg",
+    "id": 4,
+    "title": "Snow White",
+    "content": "Family movies.Kids.fiction.Movie(2005)",
+    "image": "./snow white.jpg",
   },
   {
-    id: 5,
-    title: "Angel Friends",
-    content: "Fantasy.Action.Violence.Movie(2022)",
-    image: "./angel friends.jpg",
-  },
-
-  {
-    id: 6,
-    title: "Spy x Family",
-    content: "Dramas.Action.Thriller.Movie(2005)",
-    image: "./spy x family.jpg",
-  },
-  {
-    id: 7,
-    title: "Dora",
-    content: "Comedy.Drama.Kids. Movie(2015)",
-    image: "./dora.jpg",
+    "id": 5,
+    "title": "Angel Friends",
+    "content": "Fantasy.Action.Violence.Movie(2022)",
+    "image": "./angel friends.jpg",
   },
 
   {
-    id: 8,
-    title: "Princess Cinderella",
-    content: "Family movies.Kids. sci-fi.Movie(2005)",
-    image: "./cinderella.jpg",
+    "id": 6,
+    "title": "Spy x Family",
+    "content": "Dramas.Action.Thriller.Movie(2005)",
+    "image": "./spy x family.jpg",
+  },
+  {
+    "id": 7,
+    "title": "Dora",
+    "content": "Comedy.Drama.Kids. Movie(2015)",
+    "image": "./dora.jpg",
+  },
+
+  {
+    "id": 8,
+    "title": "Princess Cinderella",
+    "content": "Family movies.Kids. sci-fi.Movie(2005)",
+    "image": "./cinderella.jpg",
   },
 ];
 
@@ -167,28 +167,28 @@ function filterKidsMovies(e) {
 const actionMoviesData = [
   
   {
-    id: 1,
-    title: "Vikings",
-    content: "Drama.Action.Violence",
-    image: "./vikings.jpg",
+    "id": 1,
+    "title": "Vikings",
+    "content": "Drama.Action.Violence",
+    "image":  "./vikings.jpg",
   },
   {
-    id: 2,
-    title: "fast x",
-    content: "Drama.Action.Violence",
-    image: "./fast x.jpg",
+    "id": 2,
+    "title": "fast x",
+    "content": "Drama.Action.Violence",
+    "image":  "./fast x.jpg",
   },
   {
-    id: 3,
-    title: "demon slayer",
-    content: "Action.Thriller.Sci-Fi.Violence",
-    image: "./demon slayer.jpg",
+    "id": 3,
+    "title": "demon slayer",
+    "content": "Action.Thriller.Sci-Fi.Violence",
+    "image":  "./demon slayer.jpg",
   },
   {
-    id: 4,
-    title: "Black Panther",
-    content: "Action.Thriller.Sci-Fi.Violence",
-    image: "./wakanda.jpg",
+    "id": 4,
+    "title": "Black Panther",
+    "content": "Action.Thriller.Sci-Fi.Violence",
+    "image":  "./wakanda.jpg",
   }
 ]
 
@@ -229,28 +229,28 @@ function filterActionMovies(e) {
 
 const dramaMoviesData = [
   {
-    id: 1,
-    title: "I can do it all by myself",
-    content: "Drama.Suspense.Romance",
-    image: "./all by myself.jpg",
+    "id": 1,
+    "title": "I can do it all by myself",
+    "content": "Drama.Suspense.Romance",
+    "image":  "./all by myself.jpg",
   },
   {
-    id: 2,
-    title: "Madea",
-    content: "Drama.Family.Comedy",
-    image: "./madea.jpg",
+    "id": 2,
+    "title": "Madea",
+    "content":  "Drama.Family.Comedy",
+    "image":  "./madea.jpg",
   },
   {
-    id: 3,
-    title: "Oval",
-    content: "Drama.Romance.Suspense",
-    image: "./oval-drama.jpg",
+    "id": 3,
+    "title": "Oval",
+    "content":  "Drama.Romance.Suspense",
+    "image": "./oval-drama.jpg",
   },
   {
-    id: 4,
-    title: "ruthless",
-    content: "Drama.Thriller.Mysterious",
-    image: "./ruthless.jpg",
+    "id": 4,
+    "title": "ruthless",
+    "content": "Drama.Thriller.Mysterious",
+    "image":   "./ruthless.jpg",
   },
 ]
 
@@ -287,40 +287,7 @@ function filterDramaMovies(e) {
 }
 
 
-
-
-// const genreBtn = document.querySelector('.genres-btn');
-// const genreDropdown = document.querySelector('.genre-dropdown-contents');
-
-// genreBtn.addEventListener('click', toggleGenreDropdown);
-
-// function toggleGenreDropdown() {
-//   if (genreDropdown.style.visibility === "hidden") {
-//     genreDropdown.style.visibility = "visible";
-//   } else {
-//     genreDropdown.style.visibility = "hidden";
-//   }
-// }
-
-// const genreLinks = genreDropdown.getElementsByTagName('a');
-// for (const link of genreLinks) {
-//   link.addEventListener('click', filterMoviesByGenre);
-// }
-
-// function filterMoviesByGenre(event) {
-//   event.preventDefault();
-//   const genre = event.target.textContent.toLowerCase();
-//   const movieSections = document.querySelectorAll('.movie-category');
-
-//   for (const section of movieSections) {
-//     const category = section.querySelector('h4.categories').textContent.toLowerCase();
-//     if (category === genre) {
-//       section.style.display = 'block';
-//     } else {
-//       section.style.display = 'none';
-//     }
-//   }
-// }
+//dropdown section
 
 const movieSections = document.querySelector('.movie-category');
 
@@ -350,82 +317,44 @@ function filterMoviesByGenre(event) {
   movieSections.forEach(section => {
     const category = section.previousElementSibling.textContent.toLowerCase();
     if (category === genre) {
-      section.style.display = 'block';
-      section.classList.add('flex-container');
+      section.style.display = 'grid';
+      section.style.gridTemplateColumns = 'repeat(4, 1fr)';
+      section.classList.add('flex-wrap');
     } else {
       section.style.display = 'none';
-      section.classList.remove('flex-container');
+      section.classList.remove('flex-wrap');
     }
   });
 }
 
-// //dropdown section
-// const DropDownBtn = document.querySelector(".genres-btn");
-// const genreContents = document.querySelector(".genre-dropdown-contents");
+function toggleMovieSections() {
+  const movieSections = document.querySelectorAll('.movie-category');
 
-// DropDownBtn.addEventListener("click", showHide);
-
-// function showHide(e) {
-//   if (genreContents.style.visibility === "hidden") {
-//     genreContents.style.visibility = "visible";
-//   } else {
-//     genreContents.style.visibility = "hidden";
-//   }
-// }
-// const genreBtn = document.querySelector('.genres-btn');
-// const genreDropdown = document.querySelector('.genre-dropdown-contents');
-
-// genreBtn.addEventListener('click', toggleGenreDropdown);
-
-// function toggleGenreDropdown() {
-//   if (genreDropdown.style.visibility === "hidden") {
-//         genreDropdown.style.visibility = "visible";
-//       } else {
-//         genreDropdown.style.visibility = "hidden";
-//       }
-//     };
-    
+  movieSections.forEach(section => {
+    section.style.display = 'block';
+    section.querySelector('div').classList.add('flex-wrap');
+  });
+}
 
 
+// DARK & LIGHT MODE
+const icon = document.querySelector(".theme-icon");
+const darkMode = document.querySelector(".moon");
+const lightMode = document.querySelector(".sun");
 
-// const genreLinks = genreDropdown.getElementsByTagName('a');
-// for (const link of genreLinks) {
-//   link.addEventListener('click', filterMoviesByGenre);
-// }
+icon.addEventListener('click', change);
 
-// function filterMoviesByGenre(event) {
-//   event.preventDefault();
-//   const genre = event.target.textContent;
-//   const movieSections = document.querySelectorAll('.categories');
-  
-//   movieSections.forEach(section => {
-//     const category = section.textContent.toLowerCase();
-//     if (category === genre.toLowerCase()) {
-//       section.style.display = 'block';
-//     } else {
-//       section.style.display = 'none';
-//     }
-//   });
-// }
+function change (){
 
-//DARK & LIGHT MODE
-// const icon = document.querySelector(".theme-icon");
-// const darkMode = document.querySelector(".moon");
-// const lightMode = document.querySelector(".sun");
+   document.body.classList.toggle('dark-mode');
 
-// icon.addEventListener('click', change);
+   if(document.body.classList.contains('dark-mode')){
+      darkMode.style.visibility = 'invisible';
+      lightMode.style.visibility = 'visible';
 
-// function change (){
+       } else {
+          darkMode.style.visibility = 'visible';
+          lightMode.style.visibility = 'invisible';
 
-//    document.body.classList.toggle('dark-mode');
-
-//    if(document.body.classList.contains('dark-mode')){
-//       darkMode.style.visibility = 'invisible';
-//       lightMode.style.visibility = 'visible';
-
-//        } else {
-//           darkMode.style.visibility = 'visible';
-//           lightMode.style.visibility = 'invisible';
-
-//  }
-// }
+ }
+}
