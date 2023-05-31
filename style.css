@@ -7,11 +7,13 @@
   }
   /* default/light mode colors */
   :root {
+    /* --moz-background-color: white; */
     --background-color: #e7e3e3;
     --text-color: #413f3f;
   }
   /* dark mode colours */
 body.dark-mode {
+  /* --moz-background-color: black ; */
   --background-color: #333333;
   --text-color: #ffffff;
 }
@@ -53,7 +55,7 @@ body.dark-mode .moon {
     top: 0px;
     left: 0px;
     z-index: 12;
-    background: rgba(0, 0, 0, 0.6);
+    /* background: rgba(0, 0, 0, 0.6); */
   }
   navbar {
     background-color: white;
@@ -73,23 +75,28 @@ body.dark-mode .moon {
   font-size: 25px;
   padding-bottom: 45px;
 }
-  /* .logo a {
-    text-decoration: none;
-    font-weight: 700;
-    color: inherit;
-  }
-
-  .logo span {
-    color: rgb(51, 51, 194);
-  } */
-
+.hamburger{
+  display: none;
+  /* padding-right: 0px; */
+  cursor: pointer;
+}
+.line{
+  display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+  background-color: var(--text-color);
+}
   .navbar-tabs {
+    
     list-style-type: none;
     display: flex;
     gap: 20px;
+    cursor: pointer;
   }
 
   .navbar-tabs li a {
+    color: red;
     text-decoration: none;
     color: var(--text-color);
     font-size: 20px;
@@ -105,6 +112,7 @@ body.dark-mode .moon {
     position: relative;
     flex: 0 0 auto;
     min-width: 30px;
+    cursor: pointer;
   }
 
   .search-icon i {
@@ -133,6 +141,34 @@ body.dark-mode .moon {
     font-size: 15px;
     color: var(--text-color);
   }
+.main-page{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.main-page img{
+  max-width: 500px;
+  max-height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .genres-btn,
   .seeAll-btn {
@@ -146,6 +182,7 @@ body.dark-mode .moon {
     font-weight: 500;
     display: flex;
     gap: 15px;
+    cursor: pointer;
   }
   
   .genres-btn{
@@ -307,6 +344,61 @@ body.dark-mode .moon {
     font-size: 18px;
   }
  
-  
+  .hide{
+    display: none;
+  }
 
+}
+@media screen and (max-width: 600px){
+.hamburger{
+  display: block;
+}
+.navbar-tabs{
+  display: block;
+  position: fixed;
+  width: 100%;
+  margin-right: 20px;
+  background-color: blue;
+}
+.navbar-tabs a{
+  display: block;
+  text-align: center;
+  padding: 10px 0px;
+}
+.popular-kids-movies,
+.popular-action-movies,
+.popular-drama-movies{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  width: 30.5rem;
+  margin: 5px auto;
+}
+.popular-kids-movies img,
+.popular-action-movies img,
+.popular-drama-movies img {
+  text-align: center;
+  object-fit: cover;
+  width: 150px;
+  max-height: 100px;
+  border-radius: 5px;
+  /* padding: 10px; */
+  transition:  0.2s;
+}
+.section-items {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  /* overflow: hidden; */
+}
+.section-items img {
+  object-fit: cover;
+  max-width: 20z0px;
+  height: 500px;
+  border-radius: 5px;
+}
 }
