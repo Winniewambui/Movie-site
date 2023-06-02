@@ -1,1 +1,115 @@
+{
+    "headerMoviesData": [
+      {"image": "./originals.jpg"},
+      {"image": "./avengers.jpg"},
+      {"image": "./merlin.jpg"},
+      {"image": "./OVAL.jpg"},
+      {"image": "./topgun.jpg"},
+      {"image": "./titanic.jpg"},
+      {"image": "./wakanda.jpg"}
+    ],
+    "kidsMoviesData": [
+      {
+        "id": 9,
+        "title": "Sophia The First",
+        "content": "Family movies. Kids. Fiction. Movie (2005)",
+        "image": "./sofia the first.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Tangled",
+        "content": "Dramas. Family Movies. Movies Based On Books (2018)",
+        "image": "./rapunzel.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Aladdin",
+        "content": "Family movies. Kids. Sci-Fi. Movie (2007)",
+        "image": "./aladdin.jpg"
+      },
+      {
+        "id": 12,
+        "title": "Snow White",
+        "content": "Family movies. Kids. Fiction. Movie (2005)",
+        "image": "./snow white.jpg"
+      },
+      {
+        "id": 13,
+        "title": "Angel Friends",
+        "content": "Fantasy. Action. Violence. Movie (2022)",
+        "image": "./angel friends.jpg"
+      },
+      {
+        "id": 14,
+        "title": "Spy x Family",
+        "content": "Dramas. Action. Thriller. Movie (2005)",
+        "image": "./spy x family.jpg"
+      },
+      {
+        "id": 15,
+        "title": "Dora",
+        "content": "Comedy. Drama. Kids. Movie (2015)",
+        "image": "./dora.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Princess Cinderella",
+        "content": "Family movies. Kids. Sci-fi. Movie (2005)",
+        "image": "./cinderella.jpg"
+      }
+    ],
+    "actionMoviesData": [
+      {
+        "id": 17,
+        "title": "Vikings",
+        "content": "Drama. Action. Violence",
+        "image": "./vikings.jpg"
+      },
+      {
+        "id": 18,
+        "title": "Fast x",
+        "content": "Drama. Action. Violence",
+        "image": "./fast x.jpg"
+      },
+      {
+        "id": 19,
+        "title": "Demon Slayer",
+        "content": "Action. Thriller. Sci-Fi. Violence",
+        "image": "./demon slayer.jpg"
+      },
+      {
+        "id": 20,
+        "title": "Black Panther",
+        "content": "Action. Thriller. Sci-Fi. Violence",
+        "image": "./wakanda.jpg"
+      }
+    ],
+    "dramaMoviesData": [
+      {
+        "id": 1,
+        "title": "I can do it all by myself",
+        "content": "Drama. Suspense. Romance",
+        "image": "./all by myself.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Madea",
+        "content": "Drama. Family. Comedy",
+        "image": "./madea.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Oval",
+        "content": "Drama.Romance.Suspense",
+        "image": "./oval-drama.jpg"
+      },
+      {
+        "id": 4,
+        "title": "ruthless",
+        "content": "Drama.Thriller.Mysterious",
+        "image": "./ruthless.jpg"
+      }
+    ]
+  }
+
 
