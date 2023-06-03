@@ -6,101 +6,183 @@ searchIcon.addEventListener("click", toggleSearchInput);
 function toggleSearchInput() {
   searchInput.style.display = "block";
   // questionMark.style.backgroundColor = inputPlaceholder.classList.contains('show') ? 'transparent' : '#745a5a';
-};
+}
 
 
+const data = [
+  {
+    "headerMoviesData": [
+      "./originals.jpg",
+      "./avengers.jpg",
+      "./merlin.jpg",
+      "./OVAL.jpg",
+      "./topgun.jpg",
+      "./titanic.jpg",
+      "./wakanda.jpg"
+    ]
+  },
+  {
+    "kidsMoviesData": [
+      {
+        "id": 9,
+        "title": "Sophia The First",
+        "content": "Family movies.Kids.fiction.Movie(2005)",
+        "image": "./sofia the first.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Tangled",
+        "content": "Dramas.Family Movies.Movies Based On Books(2018)",
+        "image": "./rapunzel.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Aladdin",
+        "content": "Family movies.Kids.Sci-Fi.Movie(2007)",
+        "image": "./aladdin.jpg"
+      },
+      {
+        "id": 12,
+        "title": "Snow White",
+        "content": "Family movies.Kids.fiction.Movie(2005)",
+        "image": "./snow white.jpg"
+      },
+      {
+        "id": 13,
+        "title": "Angel Friends",
+        "content": "Fantasy.Action.Violence.Movie(2022)",
+        "image": "./angel friends.jpg"
+      },
+      {
+        "id": 14,
+        "title": "Spy x Family",
+        "content": "Dramas.Action.Thriller.Movie(2005)",
+        "image": "./spy x family.jpg"
+      },
+      {
+        "id": 15,
+        "title": "Dora",
+        "content": "Comedy.Drama.Kids. Movie(2015)",
+        "image": "./dora.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Princess Cinderella",
+        "content": "Family movies.Kids. sci-fi.Movie(2005)",
+        "image": "./cinderella.jpg"
+      }
+    ]
+  },
+  {
+    "actionMoviesData": [
+      {
+        "id": 17,
+        "title": "Vikings",
+        "content": "Drama.Action.Violence",
+        "image": "./vikings.jpg"
+      },
+      {
+        "id": 18,
+        "title": "fast x",
+        "content": "Drama.Action.Violence",
+        "image": "./fast x.jpg"
+      },
+      {
+        "id": 19,
+        "title": "demon slayer",
+        "content": "Action.Thriller.Sci-Fi.Violence",
+        "image": "./demon slayer.jpg"
+      },
+      {
+        "id": 20,
+        "title": "Black Panther",
+        "content": "Action.Thriller.Sci-Fi.Violence",
+        "image": "./wakanda.jpg"
+      }
+    ]
+  },
+  {
+    "dramaMoviesData": [
+      {
+        "id": 1,
+        "title": "I can do it all by myself",
+        "content": "Drama.Suspense.Romance",
+        "image": "./all by myself.jpg",
+      },
+      {
+        "id": 2,
+        "title": "Madea",
+        "content": "Drama.Family.Comedy",
+        "image": "./madea.jpg",
+      },
+      {
+        "id": 3,
+        "title": "Oval",
+        "content": "Drama.Romance.Suspense",
+        "image": "./oval-drama.jpg",
+      },
+      {
+        "id": 4,
+        "title": "ruthless",
+        "content": "Drama.Thriller.Mysterious",
+        "image": "./ruthless.jpg",
+      },
+    ]
+  }
+
+];
 
 
-// function showHeaderImages(){
-//   const header = document.querySelector("header");
-//   const headerImages = data[0].headerMoviesData;
-//   const headerImagesHTML = headerImages.map((images) =>{
-//     return`
-//     <div class="header-images">
-//     <img class="item" src="${images}" alt="${images}">
-//        </div>
-//       `;
-//   }).join("");
+function showHeaderImages(){
+  const header = document.querySelector("header");
+  const headerImages = data[0].headerMoviesData;
+  const headerImagesHTML = headerImages.map((images) =>{
+    return`
+    <div class="header-images">
+    <img class="item" src="${images}" alt="${images}">
+       </div>
+      `;
+  }).join("");
 
-//   header.innerHTML = `<header>${headerImagesHTML}</header>`;
-// }
-
-// const mainPageMovies = document.querySelector(".main-page");
-
-// const movies = mainPageData.map((item) => {
-//   return `
-//   <div class = "all-movies">
-//    <img class="item" src ="${item.image}" alt="${item.title}">
-//    </div>
-//   `;
-// });
-
-// mainPageMovies.innerHTML = movies.join("");
-
-
-
-// Group movies by category
-// const moviesByCategory = {};
-
-// mainPageData.forEach((item) => {
-//   const category = getCategoryFromTitle(item.title);
-//   if (!moviesByCategory[category]) {
-//     moviesByCategory[category] = [];
-//   }
-//   moviesByCategory[category].push(item);
-// });
-
-// // Generate HTML for each category
-// for (const category in moviesByCategory) {
-//   if (moviesByCategory.hasOwnProperty(category)) {
-//     const movies = moviesByCategory[category];
-//     const moviesHTML = movies
-//       .map((item) => {
-//         return `
-//           <div class="all-movies">
-//             <h3>${item.title}</h3>
-//             <img class="item" src="${item.image}" alt="${item.title}">
-//           </div>
-//         `;
-//       })
-//       .join("");
-
-//     // Create a section for the category
-//     const sectionHTML = `
-//       <section>
-//         <h2>${category}</h2>
-//         ${moviesHTML}
-//       </section>
-//     `;
-
-//     // Append the section to the mainPageMovies container
-//     mainPageMovies.innerHTML += sectionHTML;
-//   }
-// }
-
-// // Function to extract category from movie title
-// function getCategoryFromTitle(title) {
-//   const words = title.split(" ");
-//   return words.length > 0 ? words[0] : "Uncategorized";
-// }
-
-
-
-// In this code, we first create an empty object moviesByCategory to store the movies grouped by their categories.
-//  Then, we iterate through each movie in mainPageData and add them to the corresponding category in moviesByCategory. 
-//  Next, we generate the HTML for each category by mapping over the movies in that category and creating the necessary markup. 
-// Finally, we create a section for each category and append it to the mainPageMovies container.
-
-
-//top notch movies
+  header.innerHTML = `<header>${headerImagesHTML}</header>`;
+}
+// //top notch movies
 const topMovies = [
-  { "image": "./images/originals.jpg" },
-  { "image": "./images/avengers.jpg" },
-  { "image": "./images/merlin.jpg" },
-  { "image": "./images/OVAL.jpg" },
-  { "image": "./images/topgun.jpg" },
-  { "image": "./images/titanic.jpg" },
-  { "image": "./images/wakanda.jpg" }
+  {
+    "id": 1,
+    "title": "The Originals",
+    "image": "./originals.jpg",
+  },
+  {
+    "id": 1,
+    "title": "The Avengers",
+    "image": "./avengers.jpg",
+  },
+  {
+    "id": 4,
+    "title": "The Merlin",
+    "image": "./merlin.jpg",
+  },
+  {
+    "id": 5,
+    "title": "The Oval",
+    "image": "./OVAL.jpg",
+  },
+  {
+    "id": 6,
+    "title": "Top Gun",
+    "image": "./topgun.jpg",
+  },
+  {
+    "id": 7,
+    "title": "The Titanic",
+    "image": "./titanic.jpg",
+  },
+  {
+   "id": 8,
+    "title": "Black Panther",
+    "image": "./wakanda.jpg",
+  },
 ];
 
 const sectionTopMovies = document.querySelector(".section-items");
@@ -126,271 +208,168 @@ function previousBtn() {
   sectionTopMovies.prepend(slides[slides.length - 1]);
 }
 
-//KIDS MOVIES
-const popularMoviesData = [
+const MoviesData = [
+
+  {
+    "id": 1,
+    "title": "Vikings",
+    "content": "Drama.Action.Violence",
+    "image":  "./vikings.jpg",
+    "categories":"action"
+  },
+  {
+    "id": 2,
+    "title": "fast x",
+    "content": "Drama.Action.Violence",
+    "image":  "./fast x.jpg",
+    "categories":"action"
+  },
+  {
+    "id": 3,
+    "title": "demon slayer",
+    "content": "Action.Thriller.Sci-Fi.Violence",
+    "image":  "./demon slayer.jpg",
+    "categories":"action"
+  },
+  {
+    "id": 4,
+    "title": "Black Panther",
+    "content": "Action.Thriller.Sci-Fi.Violence",
+    "image":  "./wakanda.jpg",
+    "categories":"action"
+  },
+  {
+    "id": 1,
+    "title": "I can do it all by myself",
+    "content": "Drama.Suspense.Romance",
+    "image":  "./all by myself.jpg",
+    "categories":"drama"
+  },
+  {
+    "id": 2,
+    "title": "Madea",
+    "content":  "Drama.Family.Comedy",
+    "image":  "./madea.jpg",
+    "categories":"drama"
+  },
+  {
+    "id": 3,
+    "title": "Oval",
+    "content":  "Drama.Romance.Suspense",
+    "image": "./oval-drama.jpg",
+    "categories":"drama"
+  },
+  {
+    "id": 4,
+    "title": "ruthless",
+    "content": "Drama.Thriller.Mysterious",
+    "image":   "./ruthless.jpg",
+    "categories":"drama"
+  },
   {
     "id": 1,
     "title": "Sophia The First",
     "content": "Family movies.Kids.fiction.Movie(2005)",
-    "image": "./images/sofia the first.jpg",
-    "category": "kidsShows"
+    "image": "./sofia the first.jpg",
+    "categories":"kids"
   },
   {
     "id": 2,
     "title": "Tangled",
     "content": "Dramas.Fmily Movies.Movies Based On Books(2018)",
-    "image": "./images/rapunzel.jpg",
-    "category": "kidsShows"
+    "image": "./rapunzel.jpg",
+    "categories":"drama"
+
   },
   {
     "id": 3,
     "title": "Aladdin",
     "content": "Family movies.Kids.Sci-Fi.Movie(2007)",
-    "image": "./images/aladdin.jpg",
-    "category": "kidsShows"
+    "image": "./aladdin.jpg",
+    "categories":"kids"
   },
   {
     "id": 4,
     "title": "Snow White",
     "content": "Family movies.Kids.fiction.Movie(2005)",
-    "image": "./images/snow white.jpg",
-    "category": "kidsShows"
+    "image": "./snow white.jpg",
+    "categories":"kids"
   },
   {
     "id": 5,
     "title": "Angel Friends",
     "content": "Fantasy.Action.Violence.Movie(2022)",
-    "image": "./images/angel friends.jpg",
-    "category": "kidsShows"
+    "image": "./angel friends.jpg",
+    "categories":"kids"
   },
 
   {
     "id": 6,
     "title": "Spy x Family",
     "content": "Dramas.Action.Thriller.Movie(2005)",
-    "image": "./images/spy x family.jpg",
-    "category": "kidsShows"
+    "image": "./spy x family.jpg",
+    "categories":"drama"
   },
   {
     "id": 7,
     "title": "Dora",
     "content": "Comedy.Drama.Kids. Movie(2015)",
-    "image": "./images/dora.jpg",
-    "category": "kidsShows"
+    "image": "./dora.jpg",
+    "categories":"kids"
   },
 
   {
     "id": 8,
     "title": "Princess Cinderella",
     "content": "Family movies.Kids. sci-fi.Movie(2005)",
-    "image": "./images/cinderella.jpg",
-    "category": "kidsShows"
-  },
-];
-
-const kidsCarousel = document.querySelector(".popular-kids-movies");
-
-const popularMovies = popularMoviesData.map((item) => {
-  return `
-   <div class = "kids-movies">
-    <img class="img-item" src ="${item.image}" alt="${item.title}">
-    <h2 class="title">${item.title}</h2>
-    <p>${item.content}</p>
-
-    </div>
-   `;
-});
-
-kidsCarousel.innerHTML = popularMovies.join("");
-
-//filtering KIDS movies
-searchInput.addEventListener("keyup", filterKidsMovies);
-
-function filterKidsMovies(e) {
-  const movieTitle = e.target.value.toLowerCase();
-
-  Array.from(kidsCarousel.getElementsByClassName("kids-movies")).forEach(function (movie) {
-    const title = movie.querySelector(".title").textContent.toLowerCase();
-    if (title.includes(movieTitle)) {
-      movie.style.display = "block";
-    } else {
-      movie.style.display = "none";
-    }
-  });
-}
-// We select the search input element using document.getElementById("search-input").
-// We attach an event listener to the search input field, listening for the keyup event.
-// In the movie function, we retrieve the search value from e.target.value and convert it to lowercase.
-// We iterate over each movie element in the carousel using Array.from(carousel.getElementsByClassName("popular-movies")) and apply a callback function.
-// Within the callback function, we retrieve the title of each movie by querying the .title element inside the movie element and convert it to lowercase.
-// We check if the title includes the movieTitle search value. If it does, we set the display style of the movie element to block to show it; otherwise, we set it to none to hide it.
-// This updated code will filter the movies in the carousel based on the title as the user types in the search input field. Movies with titles matching the search value will be displayed, while others will be hidden.
-
-const actionMoviesData = [
-
-  {
-    "id": 1,
-    "title": "Vikings",
-    "content": "Drama.Action.Violence",
-    "image": "./images/vikings.jpg",
-    "category": "actionShows"
-  },
-  {
-    "id": 2,
-    "title": "fast x",
-    "content": "Drama.Action.Violence",
-    "image": "./images/fast x.jpg",
-    "category": "kidsShows"
-  },
-  {
-    "id": 3,
-    "title": "demon slayer",
-    "content": "Action.Thriller.Sci-Fi.Violence",
-    "image": "./images/demon slayer.jpg",
-    "category": "kidsShows"
-  },
-  {
-    "id": 4,
-    "title": "Black Panther",
-    "content": "Action.Thriller.Sci-Fi.Violence",
-    "image": "./images/wakanda.jpg",
-    "category": "kidsShows"
+    "image": "./cinderella.jpg",
+    "categories":"kids"
   }
 ]
 
-const actionCarousel = document.querySelector(".popular-action-movies");
 
-const actionMovies = actionMoviesData.map((item) => {
+// Function to generate HTML for a movie
+function createMovieElement(movie) {
   return `
-  <div class = "action-movies">
-    <img class="" src="${item.image}" alt="${item.title}">
-    <h2 class="title">${item.title}</h2>
-    <p>${item.content}</p>
-
+    <div class="movie">
+      <img src="${movie.image}" alt="${movie.title}">
+      <h3>${movie.title}</h3>
+      <p>${movie.content}</p>
     </div>
   `;
+}
+
+// Function to display movies based on the selected genre
+function displayMovies(genre) {
+  const popularMoviesContainer = document.querySelector('.popular-movies');
+  popularMoviesContainer.innerHTML = ''; // Clear previous movie list
+
+  // Filter movies based on the selected genre
+  const filteredMovies = genre === 'all' ? MoviesData : MoviesData.filter(movie => movie.categories === genre);
+
+  // Generate HTML elements for each movie
+  filteredMovies.map(movie => {
+    const movieElement = createMovieElement(movie);
+    
+    popularMoviesContainer.innerHTML += movieElement;
+  });
+}
+
+// Event listener for genre selection
+const languageSelect = document.getElementById('language');
+languageSelect.addEventListener('change', function() {
+  const selectedGenre = this.value;
+  displayMovies(selectedGenre);
 });
 
-actionCarousel.innerHTML = actionMovies.join("");
+// Initially display all movies
+displayMovies('all');
 
-// filtering ACTION movies
-searchInput.addEventListener("keyup", filterActionMovies);
 
-function filterActionMovies(e) {
-  const movieTitle = e.target.value.toLowerCase();
 
-  Array.from(actionCarousel.getElementsByClassName("action-movies")).forEach(function (movie) {
-    const title = movie.querySelector(".title").textContent.toLowerCase();
-    if (title.includes(movieTitle)) {
-      movie.style.display = "block";
-    } else {
-      movie.style.display = "none";
-    }
-  });
-}
 
-const dramaMoviesData = [
-  {
-    "id": 1,
-    "title": "I can do it all by myself",
-    "content": "Drama.Suspense.Romance",
-    "image": "./images/all by myself.jpg",
-    "category": "dramaShows"
-  },
-  {
-    "id": 2,
-    "title": "Madea",
-    "content": "Drama.Family.Comedy",
-    "image": "./images/madea.jpg",
-    "category": "dramaShows"
-  },
-  {
-    "id": 3,
-    "title": "Oval",
-    "content": "Drama.Romance.Suspense",
-    "image": "./images/oval-drama.jpg",
-    "category": "dramaShows"
-  },
-  {
-    "id": 4,
-    "title": "ruthless",
-    "content": "Drama.Thriller.Mysterious",
-    "image": "./images/ruthless.jpg",
-    "category": "dramaShows"
-  },
-]
 
-const dramaCarousel = document.querySelector(".popular-drama-movies");
-
-const dramaMovies = dramaMoviesData.map((item) => {
-  return `
-  <div class = "drama-movies">
-    <img class="" src="${item.image}" alt="${item.title}">
-    <h2 class="title">${item.title}</h2>
-    <p>${item.content}</p>
-
-    </div>
-  `;
-});
-
-dramaCarousel.innerHTML = dramaMovies.join("");
-
-// filtering ACTION movies
-searchInput.addEventListener("keyup", filterDramaMovies);
-
-function filterDramaMovies(e) {
-  const movieTitle = e.target.value.toLowerCase();
-
-  Array.from(dramaCarousel.getElementsByClassName("drama-movies")).forEach(function (movie) {
-    const title = movie.querySelector(".title").textContent.toLowerCase();
-    if (title.includes(movieTitle)) {
-      movie.style.display = "block";
-    } else {
-      movie.style.display = "none";
-    }
-  });
-}
-
-//dropdown section
-
-const movieSections = document.querySelector('.movie-category');
-
-const genreBtn = document.querySelector('.genres-btn');
-const genreDropdown = document.querySelector('.genre-dropdown-contents');
-
-genreBtn.addEventListener('click', toggleGenreDropdown);
-
-function toggleGenreDropdown() {
-  if (genreDropdown.style.visibility === 'hidden') {
-    genreDropdown.style.visibility = 'visible';
-  } else {
-    genreDropdown.style.visibility = 'hidden';
-  }
-}
-
-const genreLinks = genreDropdown.getElementsByTagName('a');
-for (const link of genreLinks) {
-  link.addEventListener('click', filterMoviesByGenre);
-}
-
-function filterMoviesByGenre(event) {
-  event.preventDefault();
-  const genre = event.target.textContent.toLowerCase();
-  const movieSections = document.querySelectorAll('.movie-category > div');
-
-  movieSections.forEach(section => {
-    const category = section.previousElementSibling.textContent.toLowerCase();
-    if (category === genre) {
-      section.style.display = 'grid';
-      section.style.gridTemplateColumns = 'repeat(4, 1fr)';
-      section.classList.add('flex-wrap');
-    } else {
-      section.style.display = 'none';
-      section.classList.remove('flex-wrap');
-    }
-  });
-}
-//SEEALL BUTTON
+// //SEEALL BUTTON
 function toggleMovieSections() {
   const movieSections = document.querySelectorAll('.movie-category');
 
@@ -400,8 +379,8 @@ function toggleMovieSections() {
   });
 }
 
-const seeAllButton = document.querySelector('.seeAll-btn');
-seeAllButton.addEventListener('click', toggleMovieSections);
+// const seeAllButton = document.querySelector('.seeAll-btn');
+// seeAllButton.addEventListener('click', toggleMovieSections);
 
 // DARK & LIGHT MODE
 const icon = document.querySelector(".theme-icon");
