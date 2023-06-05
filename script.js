@@ -91,13 +91,13 @@ const data = [
         "id": 19,
         "title": "demon slayer",
         "content": "Action.Thriller.Sci-Fi.Violence",
-        "image": "./demon slayer.jpg"
+        "image": "./images/demon slayer.jpg"
       },
       {
         "id": 20,
         "title": "Black Panther",
         "content": "Action.Thriller.Sci-Fi.Violence",
-        "image": "./wakanda.jpg"
+        "image": "./images/wakanda.jpg"
       }
     ]
   },

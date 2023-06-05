@@ -151,7 +151,10 @@ body.dark-mode .moon {
   max-width: 500px;
   max-height: 600px;
 }
-
+/* p::after {
+  content: \01F667;
+  background-color: yellow;;
+} */
   .genres-btn,
   .seeAll-btn {
     color: var(--text-color);
@@ -166,54 +169,12 @@ body.dark-mode .moon {
     gap: 15px;
     cursor: pointer;
   }
-  
-  .genres-btn{
-    margin-left: 140px;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
   .seeAll-btn{
     background-color: rgba(0, 0, 0, 0.1);
   }
-  /* .genres-menu:hover .genre-dropdown-contents {
-  visibility: visible;
-} */
-.genres-menu {
-  position: relative;
-  margin: 10px;
-  text-transform: capitalize;
-}
-
-.genre-dropdown-contents {
-  visibility: hidden;
-  position: absolute;
-  z-index: 2;
-  background-color: rgb(243, 240, 240);
-  min-width: 120px;
-  border-radius: 10px;
-  top: 41px;
-  left: 145px;
-  padding: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.genre-dropdown-contents li {
-  text-transform: capitalize;
-  list-style: none;
-}
-
-.genre-dropdown-contents li a {
-  text-decoration: none;
-  display: block;
-  padding: 10px; 
-  color: #333;
-}
-
-.genre-dropdown-contents li a:hover {
-  background-color: #ccc;
-}
-.fa-chevron-down {
+/* .fa-chevron-down {
   margin-left: 5px;
-}
+} */
   .popularMovies-header {
     max-width: 1200px;
     margin: 0 auto;
@@ -277,17 +238,9 @@ body.dark-mode .moon {
   #next-slide :focus {
     outline: 1px solid var(--text-color);
   }
-
-  .categories{
-    position: relative;
-    left: 300px;
-    bottom: 5px;
-    font-size: 18px;
-  }
- 
-  .hide{
+  /* .hide{
     display: none;
-  }
+  } */
 
 }
 @media screen and (max-width: 600px){
@@ -336,8 +289,6 @@ body.dark-mode .moon {
   border-radius: 4px;
   overflow: hidden;
 }
-
-
 .custom-select::after {
   content: '\25BC';
   position: absolute;
@@ -347,7 +298,6 @@ body.dark-mode .moon {
   font-size: 16px;
   pointer-events: none;
 }
-
 
 .custom-select select {
   width: 100%;
