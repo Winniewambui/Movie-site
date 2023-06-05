@@ -3,17 +3,17 @@ const icon = document.querySelector(".theme-icon");
 const darkMode = document.querySelector(".moon");
 const lightMode = document.querySelector(".sun");
 
-icon.addEventListener("click", change);
+icon.addEventListener("click", toggleDarkMode);
 
-function change() {
+function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 
   if (document.body.classList.contains("dark-mode")) {
-    darkMode.style.visibility = "invisible";
-    lightMode.style.visibility = "visible";
+    darkMode.style.display = "none";
+    lightMode.style.display = "inline";
   } else {
-    darkMode.style.visibility = "visible";
-    lightMode.style.visibility = "invisible";
+    darkMode.style.display = "inline";
+    lightMode.style.display = "none";
   }
 }
 
@@ -21,14 +21,19 @@ function change() {
 //SEARCH INPUT FUNCTIONALITY
 const searchIcon = document.querySelector(".search-icon");
 const searchInput = document.querySelector("#search-input");
-
-
-searchIcon.addEventListener("click", toggleSearchInput);
+let searchValue;
 
 
 function toggleSearchInput() {
   searchInput.style.display = "block"
 }
+searchIcon.addEventListener("click", toggleSearchInput);
+
+searchInput.addEventListener("input", function() {
+   searchValue = searchInput.value;
+
+});
+
 
 
 // Top Notch Movies
@@ -72,7 +77,7 @@ const moviesData = [
     title: "demon slayer",
     content: "Action.Thriller.Sci-Fi.Violence",
     image: "./images/demon slayer.jpg",
-    category: "kidsShows",
+    category: "actionShows",
   },
   {
     id: 2,
@@ -107,7 +112,7 @@ const moviesData = [
     title: "Black Panther",
     content: "Action.Thriller.Sci-Fi.Violence",
     image: "./images/wakanda.jpg",
-    category: "kidsShows",
+    category: "actionShows",
   },
   {
     id: 7,
@@ -149,7 +154,7 @@ const moviesData = [
     title: "fast x",
     content: "Drama.Action.Violence",
     image: "./images/fast x.jpg",
-    category: "kidsShows",
+    category: "actionShows",
   },
   {
     id: 13,
@@ -192,38 +197,6 @@ function createMovieElement(movie) {
   `;
 }
 
-//filtering in the search input of the navbar
-
-const allMovies = document.querySelectorAll(".popular-movies");
-// searchInput.addEventListener("keyup", handleSearch);
-
-// function handleSearch() {
-//   const searchValue = searchInput.value.toLowerCase();
-
-//   allMovies.forEach((movie) => {
-//     const title = movie.querySelector("h3").textContent.toLowerCase();
-
-//     if (searchValue === "" || title.toLowerCase().includes(searchValue)) {
-//       movie.style.display = "block";
-//     } else {
-//       movie.style.display = "none";
-//     }
-//   });
-// }
-searchInput.addEventListener("keyup",filterMovies);
-
-function filterMovies(e) {
-  const searchValue = e.target.value.toLowerCase();
-
-  Array.from(allMovies.getElementsByClassName("movie")).forEach(function (movie) {
-    const title = movie.querySelector(".title").textContent.toLowerCase();
-    if (title.includes(movieTitle)) {
-      movie.style.display = "block";
-    } else {
-      movie.style.display = "none";
-    }
-  });
-}
 
 // Function to display movies based on the selected genre
 function displayMovies(genre) {
@@ -231,8 +204,18 @@ function displayMovies(genre) {
   popularMoviesContainer.innerHTML = ""; // Clear previous movie list
 
   // Filter movies based on the selected genre
-  const filteredMovies =
-    genre === "all" ? moviesData : moviesData.filter((movie) => movie.category === genre);
+  let filteredMovies = moviesData
+
+  if (searchValue !== "") {
+    filteredMovies = moviesData.filter(function(movie) {
+      return movie.title.toLowerCase().includes(searchValue);
+    });
+  }
+  filteredMovies = genre === "all" ? moviesData : moviesData.filter((movie) => movie.category === genre);
+
+
+  
+
 
   // Generate HTML elements for each movie
   filteredMovies.forEach((movie) => {

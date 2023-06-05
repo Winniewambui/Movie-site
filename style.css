@@ -32,23 +32,17 @@ body.dark-mode {
 .moon,
 .sun {
   position: absolute;
-  /* background-color: var(--background-color);
-  color: var(--text-color); */
 }
 .sun {
-  visibility: hidden;
+  display: none;
 }
 
-.moon {
-  visibility: visible;
+.dark-mode .sun {
+  display: inline;
 }
 
-body.dark-mode .sun {
-  visibility: visible;
-}
-
-body.dark-mode .moon {
-  visibility: hidden;
+.dark-mode .moon {
+  display: none;
 }
   nav {
     position: sticky;
@@ -90,7 +84,6 @@ body.dark-mode .moon {
   background-color: var(--text-color);
 }
   .navbar-tabs {
-    
     list-style-type: none;
     display: flex;
     gap: 20px;
@@ -143,21 +136,9 @@ body.dark-mode .moon {
     font-size: 15px;
     color: var(--text-color);
   }
-.main-page{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.main-page img{
-  max-width: 500px;
-  max-height: 600px;
-}
-/* p::after {
-  content: \01F667;
-  background-color: yellow;;
-} */
-  .genres-btn,
   .seeAll-btn {
     color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.1);
     /* box-shadow: 2px 2px 5px var(--text-color); */
     border: none;
     border-radius: 5px;
@@ -169,12 +150,6 @@ body.dark-mode .moon {
     gap: 15px;
     cursor: pointer;
   }
-  .seeAll-btn{
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-/* .fa-chevron-down {
-  margin-left: 5px;
-} */
   .popularMovies-header {
     max-width: 1200px;
     margin: 0 auto;
@@ -238,26 +213,145 @@ body.dark-mode .moon {
   #next-slide :focus {
     outline: 1px solid var(--text-color);
   }
-  /* .hide{
+   /* Style for the select element */
+   .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 40px; 
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .custom-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+  }
+  .custom-select select {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+    font-size: 20px;
+  }
+  
+  .custom-select select:focus {
+    outline: none;
+  }
+  
+  .custom-select select option {
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 20px;
+    padding: 8px;
+  }
+  
+  .custom-select select option:hover {
+    background-color: #ddd;
+  }
+  
+  .movie-container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .popular-movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .movie {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .movie img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .movie h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .movie p {
+    font-size: 14px;
+    color: #888;
+  }
+  .hamburger{
     display: none;
-  } */
-
+  }
 }
+
 @media screen and (max-width: 600px){
+  main {
+    margin: auto;
+    overflow: hidden;
+  background-color: var(--background-color);
+}
 .hamburger{
   display: block;
 }
+nav{
+  position: relative;
+}
+
+navbar{
+background-color: red;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
 .navbar-tabs{
-  display: block;
-  position: fixed;
-  width: 100%;
-  margin-right: 20px;
-  background-color: blue;
+  position: absolute;
+  /* width: 100%; */
+  right: 20px;
+  /* background-color: blue; */
+  list-style-type: none;
+}
+.navbar-tabs li a {
+  color: red;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 .navbar-tabs a{
-  display: block;
+  /* display: block; */
   text-align: center;
   padding: 10px 0px;
+}
+/* .logo-img{
+  height: 50px;
+   font-size: 25px;
+   padding-bottom: 25px;
+ } */
+ .theme-icon {
+  position: absolute;
+  right: 450px;
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
 }
 .section-items {
   margin-top: 20px;
@@ -268,94 +362,93 @@ body.dark-mode .moon {
   gap: 5px;
   /* overflow: hidden; */
 }
-.section-items img {
-  object-fit: cover;
-  max-width: 20z0px;
-  height: 500px;
-  border-radius: 5px;
-}
-}
+  .logo-img{
+    display: none;
+    width: 20px;
+    height: 50px;
+     font-size: 25px;
+     padding-bottom: 45px;
+   }
+   .section-items img {
+    object-fit: cover;
+    max-width: 100px;
+    height: 150px;
+    border-radius: 5px;
+  }
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 40px; 
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .custom-select select {
+    padding: 5px;
+    font-size: 10px;
+  }
+  .movie-container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .popularMovies-header {
+    max-width: 400px;
+    margin: 0 auto;
+    color: var(--text-color);
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+  .popularMovies-header h3 {
+    color: black;
+    font-size: 10px;
+  }
+  .seeAll-btn {
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 50px;
+    gap: 15px;
+    cursor: pointer;
+  }
+  .popular-movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .movie {
+    border: none;
+    /* border: 1px solid #ddd; */
+    /* padding: 2px; */
+    text-align: center;
+    /* flex: 0 0 50%;         Adjust the width of each movie item */
+  
+  }
+  
+  .movie img {
+    width: 130px;
+    max-height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
 
- /* Style for the select element */
- .custom-select {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  height: 40px; 
-  margin-top: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.custom-select::after {
-  content: '\25BC';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-}
+  }
+  
+  .movie h3 {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .movie p {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+  }
 
-.custom-select select {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  appearance: none;
-  font-size: 20px;
-}
 
-.custom-select select:focus {
-  outline: none;
-}
 
-.custom-select select option {
-  background-color: #f1f1f1;
-  color: #333;
-  font-size: 20px;
-  padding: 8px;
-}
-
-.custom-select select option:hover {
-  background-color: #ddd;
-}
-
-.movie-container{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.popular-movies {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.movie {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.movie img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.movie h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.movie p {
-  font-size: 14px;
-  color: #888;
 }
