@@ -36,9 +36,12 @@ function toggleSearchInput() {
 searchIcon.addEventListener("click", toggleSearchInput);
 
 searchInput.addEventListener("input", function() {
-   searchValue = searchInput.value;
+  searchValue = searchInput.value.toLowerCase(); 
 
+  const selectedGenre = languageSelect.value;
+  displayMovies(selectedGenre);
 });
+
 
 
 
@@ -209,7 +212,7 @@ function displayMovies(genre) {
   const popularMoviesContainer = document.querySelector(".popular-movies");
   popularMoviesContainer.innerHTML = ""; // Clear previous movie list
 
-  // Filter movies based on the selected genre
+  // Filter movies based on the selected genre and search value
   let filteredMovies = moviesData
 
   if (searchValue !== "") {
@@ -249,20 +252,3 @@ function toggleMovieSections() {
     section.querySelector("div").classList.add("flex-wrap");
   });
 }
-// const seeAllButton = document.querySelector('.seeAll-btn');
-// seeAllButton.addEventListener('click', toggleMovieSections);
-
-
-//DROPDOWN BUTTON
-// const genreBtn = document.querySelector(".genres-btn");
-// const genreDropdown = document.querySelector(".genre-dropdown-contents");
-
-// genreBtn.addEventListener("click", toggleGenreDropdown);
-
-// function toggleGenreDropdown() {
-//   if (genreDropdown.style.visibility === "hidden") {
-//     genreDropdown.style.visibility = "visible";
-//   } else {
-//     genreDropdown.style.visibility = "hidden";
-//   }
-// }
