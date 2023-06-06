@@ -26,8 +26,8 @@ body.dark-mode {
   color: var(--text-color);
   cursor: pointer;
   position: relative;
-  width: 24px; /* Adjust the width as needed */
-  height: 24px; /* Adjust the height as needed */
+  width: 24px; 
+  height: 24px; 
 }
 .moon,
 .sun {
@@ -51,7 +51,6 @@ body.dark-mode {
     z-index: 12;
     background-color: white;
     box-shadow: 2px 2px 5px rgb(201, 201, 201);
-    /* background: rgba(0, 0, 0, 0.6); */
   }
   navbar {
     max-width: 1200px;
@@ -73,15 +72,7 @@ body.dark-mode {
 }
 .hamburger{
   display: none;
-  /* padding-right: 0px; */
   cursor: pointer;
-}
-.line{
-  display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-  background-color: var(--text-color);
 }
   .navbar-tabs {
     list-style-type: none;
@@ -90,7 +81,7 @@ body.dark-mode {
     cursor: pointer;
   }
 
-  .navbar-tabs li a {
+  .navbar-tabs a {
     color: red;
     text-decoration: none;
     color: var(--text-color);
@@ -109,9 +100,7 @@ body.dark-mode {
     min-width: 30px;
     cursor: pointer;
   }
-
   .search-icon i {
-    /* background-color: var(--background-color); */
     padding: 10px;
     position: absolute;
     right: 20px;
@@ -126,7 +115,6 @@ body.dark-mode {
     width: 200px;
     border-radius: 10px;
   }
-
   .search-icon input.show {
     display: inline-block;
   }
@@ -139,7 +127,6 @@ body.dark-mode {
   .seeAll-btn {
     color: var(--text-color);
     background-color: rgba(0, 0, 0, 0.1);
-    /* box-shadow: 2px 2px 5px var(--text-color); */
     border: none;
     border-radius: 5px;
     padding: 10px 25px;
@@ -165,7 +152,6 @@ body.dark-mode {
     color: black;
     font-size: 20px;
   }
- 
   .section-items {
     margin-top: 40px;
     position: relative;
@@ -173,7 +159,6 @@ body.dark-mode {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* overflow: hidden; */
   }
   .section-items img {
     object-fit: cover;
@@ -181,10 +166,6 @@ body.dark-mode {
     height: 500px;
     border-radius: 5px;
   }
-  /* .section-items img:nth-child(n+5) {
-    display: none;
-  } */
-
   #previous-slide,
   #next-slide {
     position: absolute;
@@ -208,7 +189,6 @@ body.dark-mode {
     border: none;
     color: white;
   }
-
   #previous-slide,
   #next-slide :focus {
     outline: 1px solid var(--text-color);
@@ -294,80 +274,127 @@ body.dark-mode {
     font-size: 14px;
     color: #888;
   }
-  .hamburger{
-    display: none;
-  }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
   main {
     margin: auto;
     overflow: hidden;
-  background-color: var(--background-color);
-}
-.hamburger{
-  display: block;
+    background-color: #dddada;
 }
 nav{
-  position: relative;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 12;
 }
+.logo-img{
+  display: none;
 
-navbar{
+ }
+ navbar{
 background-color: red;
+height: 80px;
+width: 100%;
 display: flex;
 align-items: center;
-justify-content: space-around;
+text-align: center;
+justify-content: flex-end;
+/* position: relative; */
+}
+.hamburger{
+  order: 2;
+  position: static;
+  transform: none;
+  float: none;
+  position: relative; 
+  /* float:right;  */
+  /* top: 50%; 
+  transform: translateY(-50%); */
+  cursor: pointer;
+ }
+ .hamburger .line{
+   display: block;
+   width: 40px;
+   height: 5px;
+   margin-bottom: 5px;
+   background-color: black;
+ }
+ .menu {
+  display: none;
 }
 
+.menu.show {
+  display: block;
+}
 .navbar-tabs{
   position: absolute;
-  /* width: 100%; */
-  right: 20px;
-  /* background-color: blue; */
-  list-style-type: none;
+  top: 45%;
+  right: 0;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f0f0;
+  width: min-content;
+  /* margin-top: 10px; */
+  padding: 0;
 }
-.navbar-tabs li a {
+/* .menu.show .navbar-tabs {
+  display: flex;
+} */
+.navbar-tabs a {
+  display: block;
   color: red;
   text-decoration: none;
   color: var(--text-color);
   font-size: 10px;
   font-weight: 700;
   text-transform: capitalize;
-}
-.navbar-tabs a{
-  /* display: block; */
   text-align: center;
   padding: 10px 0px;
 }
-/* .logo-img{
-  height: 50px;
-   font-size: 25px;
-   padding-bottom: 25px;
- } */
+.search-icon{
+  display: none;
+}
+
  .theme-icon {
-  position: absolute;
-  right: 450px;
+  margin-right: auto;
+  cursor: pointer;
   color: var(--text-color);
   cursor: pointer;
   position: relative;
-  width: 24px; /* Adjust the width as needed */
-  height: 24px; /* Adjust the height as needed */
+  width: 24px;
+  height: 24px; 
 }
+.moon,
+.sun {
+  position: absolute;
+}
+.sun {
+  display: none;
+}
+
+.dark-mode .sun {
+  display: inline;
+}
+
+.dark-mode .moon {
+  display: none;
+}
+
 .section-items {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  /* overflow: hidden; */
 }
   .logo-img{
     display: none;
-    width: 20px;
-    height: 50px;
-     font-size: 25px;
-     padding-bottom: 45px;
+  
    }
    .section-items img {
     object-fit: cover;
@@ -378,13 +405,12 @@ justify-content: space-around;
   .custom-select {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 40px; 
-    margin-top: 20px;
+    width: 250px;
+    height: 50px; 
+    margin: 10px;
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #f1f1f1;
-    border-radius: 4px;
+    font-size: 18px;
+    border-radius: 5px;
     overflow: hidden;
   }
   .custom-select select {
@@ -400,7 +426,7 @@ justify-content: space-around;
     margin: 0 auto;
     color: var(--text-color);
     width: 80%;
-    margin: 10px auto;
+    /* margin: 10px auto; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -408,9 +434,13 @@ justify-content: space-around;
   }
   .popularMovies-header h3 {
     color: black;
-    font-size: 10px;
+    font-size: 16px;
   }
   .seeAll-btn {
+    font-size: 12px;
+    width: 80px;
+    height: 25px; 
+    margin: 10px;
     border-radius: 5px;
     padding: 5px;
     margin-left: 50px;
@@ -424,21 +454,14 @@ justify-content: space-around;
   }
   .movie {
     border: none;
-    /* border: 1px solid #ddd; */
-    /* padding: 2px; */
     text-align: center;
-    /* flex: 0 0 50%;         Adjust the width of each movie item */
-  
   }
-  
   .movie img {
-    width: 130px;
-    max-height: 100px;
+    width: 200px;
+    max-height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
-
   }
-  
   .movie h3 {
     font-size: 12px;
     margin-bottom: 5px;
@@ -447,8 +470,6 @@ justify-content: space-around;
     font-size: 12px;
     color: #888;
     text-align: center;
+    padding: 0 80px;
   }
-
-
-
 }

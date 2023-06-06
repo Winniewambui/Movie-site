@@ -16,7 +16,13 @@ function toggleDarkMode() {
     lightMode.style.display = "none";
   }
 }
+//HAMBURGER
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menu");
 
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
 //SEARCH INPUT FUNCTIONALITY
 const searchIcon = document.querySelector(".search-icon");
