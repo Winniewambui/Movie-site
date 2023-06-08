@@ -369,15 +369,16 @@ displayMovies('all');
 
 
 
-// //SEEALL BUTTON
-function toggleMovieSections() {
-  const movieSections = document.querySelectorAll('.movie-category');
+//SEEALL BUTTON
+let seeAllBtn; 
+seeAllBtn.addEventListener('click', function toggledisplayMovies() {
+   displayMovies = genre === 'all';
 
-  movieSections.forEach(section => {
-    section.style.display = 'block';
-    section.querySelector('div').classList.add('flex-wrap');
+  displayMovies.forEach(movie => {
+    movie .style.display = 'block';
+    movie .querySelector('div').classList.add('flex-wrap');
   });
-}
+});
 
 // const seeAllButton = document.querySelector('.seeAll-btn');
 // seeAllButton.addEventListener('click', toggleMovieSections);

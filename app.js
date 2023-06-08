@@ -38,10 +38,18 @@ searchIcon.addEventListener("click", toggleSearchInput);
 searchInput.addEventListener("input", function() {
   searchValue = searchInput.value.toLowerCase(); 
 
-  const selectedGenre = languageSelect.value;
-  displayMovies(selectedGenre);
+//   const selectedGenre = languageSelect.value;
+//   displayMovies(selectedGenre);
+// });
+Array.from(popularMoviesContainer.getElementsByClassName("movie")).forEach(function (movie) {
+const title = movie.querySelector(".title").textContent.toLowerCase();
+if (title.includes(searchValue)) {
+  movie.style.display = "block";
+} else {
+  movie.style.display = "none";
+}
 });
-
+});
 
 
 
@@ -206,11 +214,13 @@ function createMovieElement(movie) {
   `;
 }
 
-
 // Function to display movies based on the selected genre
-function displayMovies(genre) {
+function displayMovies(genre) {   
+               // This function takes a genre as its argument and displays a list of movies of that genre.
   const popularMoviesContainer = document.querySelector(".popular-movies");
   popularMoviesContainer.innerHTML = ""; // Clear previous movie list
+              // This line gets the .popular-movies container element and clears its contents. 
+              // This is done so that the list of movies is displayed fresh each time the function is called
 
   // Filter movies based on the selected genre and search value
   let filteredMovies = moviesData
@@ -218,12 +228,16 @@ function displayMovies(genre) {
   if (searchValue !== "") {
     filteredMovies = moviesData.filter(function(movie) {
       return movie.title.toLowerCase().includes(searchValue);
-    });
-  }
+    }); 
+  } 
   filteredMovies = genre === "all" ? moviesData : moviesData.filter((movie) => movie.category === genre);
-
-
-  
+                    // This code filters the movies based on the selected genre and search value. 
+                   // If the search value is not empty, the moviesData array is filtered using the filter() method to return, 
+                  //  only the movies whose titles contain the search value. 
+                  // Otherwise, the genre variable is checked to see if it is equal to the string "all". 
+                 // If it is, the moviesData array is returned. 
+                // Otherwise, the moviesData array is filtered using the filter() method to return, only
+                //  the movies whose category property is equal to the value of the genre variable
 
 
   // Generate HTML elements for each movie
@@ -232,6 +246,10 @@ function displayMovies(genre) {
     popularMoviesContainer.innerHTML += movieElement;
   });
 }
+              // This code iterates through the filtered movies and generates an HTML element for each one.
+              // The HTML element is created using the createMovieElement() function. 
+              // The generated HTML elements are then added to the popularMoviesContainer element.
+
 
 // Event listener for genre selection
 const languageSelect = document.getElementById("language");
@@ -239,12 +257,21 @@ languageSelect.addEventListener("change", function () {
   const selectedGenre = this.value;
   displayMovies(selectedGenre);
 });
+             // This code adds an event listener to the languageSelect element. 
+            //  The event listener listens for the change event. 
+            //  When the change event occurs, the selectedGenre variable is set to the value of the languageSelect element. 
+            //  The displayMovies() function is then called with the selectedGenre variable as its argument.
+
 
 // Initially display all movies
 displayMovies("all");
 
+// This line calls the displayMovies() function with the string "all" as its argument.
+//  This displays a list of all the movies.
+
+
 // SEE ALL BUTTON
-function toggleMovieSections() {
+function toggledisplayMovies() {
   const movieSections = document.querySelectorAll(".movie-category");
 
   movieSections.forEach((section) => {
@@ -252,3 +279,13 @@ function toggleMovieSections() {
     section.querySelector("div").classList.add("flex-wrap");
   });
 }
+//SEEALL BUTTON
+// let seeAllBtn; 
+// seeAllBtn.addEventListener('click', function toggleseeAllBtn() {
+//    displayMovies = genre === 'all';
+
+//   displayMovies.forEach(movie => {
+//     movie .style.display = 'block';
+//     movie .querySelector('div').classList.add('flex-wrap');
+//   });
+// });
